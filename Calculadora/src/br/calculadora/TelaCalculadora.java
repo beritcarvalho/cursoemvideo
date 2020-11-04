@@ -213,16 +213,34 @@ public class TelaCalculadora extends javax.swing.JFrame {
         num1 = Integer.parseInt(txtNum1.getValue().toString());
         num2 = Integer.parseInt(txtNum2.getValue().toString());
         
+        //realizando soma
         som = num1 + num2;
+        
+        //realizando subtracao
         sub = num1 - num2;
+        
+        //realizando divisao
         div = (double)num1 / (double) num2;
+        
+        //realizando multiplicacao
         mul = num1 * num2;
+        
+        //realizando resto divisao
         rest = num1 % num2;
+        
+        //realizando potencia
         pot = (double) (Math.pow(num1, num2));
+        
+        //realizando raiz quadrada
         raiz2 = (double)Math.sqrt(num1);
+        
+        //realizando raiz cubica
         raiz3 = (double)Math.cbrt(num1);
+        
+        //realizando valor absoluto
         abso = Math.abs(num1);
         
+        //escrevendo resultados na tela
         lblSoma.setText(Integer.toString(som));
         lblSubtracao.setText(Integer.toString(sub));
         lblDivisao.setText(String.format("%.2f",div));
