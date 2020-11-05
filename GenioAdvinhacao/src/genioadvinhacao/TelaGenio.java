@@ -5,6 +5,7 @@
  */
 package genioadvinhacao;
 
+import java.awt.Font;
 import java.util.Random;
 
 /**
@@ -94,6 +95,7 @@ public class TelaGenio extends javax.swing.JFrame {
         
         String res = (usuario == genioEscolha)? String.format("<html><br><strong>ACERTOU</strong><br><br>pensei em %d também</html>",genioEscolha) : String.format("<html><br><strong>ERROU</strong><br><br>pensei em %d, tente novamente</html>",genioEscolha);
         
+        lblBalaoFala.setFont(new Font("Arial Black", Font.PLAIN,16));
         lblBalaoFala.setText(res);
     }//GEN-LAST:event_btnTentarActionPerformed
 
