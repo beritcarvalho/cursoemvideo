@@ -341,8 +341,8 @@ public class TelaEquacao extends javax.swing.JFrame {
         int c = Integer.parseInt(txtC.getValue().toString());
         lblC.setText(Integer.toString(c));
 
-        float delta = (float) (pow((float)b,2)-4*(a*c));
-        lblDeltaResultado.setText(Float.toString(delta));
+        double delta = pow(b,2)-4*a*c;
+        lblDeltaResultado.setText(String.format("%.2f", delta));
         
 
         
@@ -352,10 +352,10 @@ public class TelaEquacao extends javax.swing.JFrame {
             delta < 0 nao possui raizes reais.*/
         
         if (delta > 0 || delta == 0){
-            float xPos = (float) ((- b + sqrt(delta))/(2*4));
-            float xNeg = (float) ((- b - sqrt(delta))/(2*4));
-            lblX1.setText(Float.toString(xPos));
-            lblTipo2.setText (Float.toString(xNeg));
+            double xPos = ((- b + sqrt(delta))/(2*4));
+            double xNeg = ((- b - sqrt(delta))/(2*4));
+            lblX1.setText(String.format("%.2f", xPos));
+            lblTipo2.setText (String.format("%.2f", xNeg));
             
             panRaizes.setVisible(true);
         }
